@@ -27,7 +27,7 @@ export default function LoginScreen() {
          </TouchableOpacity>
          </View>
 
-         <View style={{flex: 1, backgroundColor: 'white', marginTop: 20, borderTopRightRadius:50, borderTopLeftRadius:50}}>
+        <View style={{flex: 1, backgroundColor: 'white', marginTop: 20, borderTopRightRadius:50, borderTopLeftRadius:50}}>
             
             <View style={{ padding:50 }}>
                  <Text style={{ fontWeight: 'bold'}}>Email Address</Text>
@@ -41,6 +41,34 @@ export default function LoginScreen() {
                   secureTextEntry={true}
                   placeholder= "Enter password"
                   />
+                  <View style={{ alignItems: 'flex-end',marginTop: 10 }}>
+                    <TouchableOpacity>
+                        <Text style={{color: '#1f2021ff'}}>Forgot Password?</Text>
+                    </TouchableOpacity>
+                  </View>
+                 <TouchableOpacity
+                        style={{
+                            backgroundColor: '#f4c430', 
+                            height: 45,
+                            width: 200,
+                            borderRadius: 10,
+                            justifyContent: 'center', 
+                            alignItems: 'center',    
+                            marginTop: 20,
+                            shadowColor: '#000',
+                            shadowOffset: { width: 0, height: 2 },
+                            shadowOpacity: 0.3,
+                            shadowRadius: 3,
+                            elevation: 5, 
+                            marginLeft: 50
+                        }}
+                        >
+                        <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#000' }}>
+                            Log In
+                        </Text>
+                    </TouchableOpacity>
+
+                  
             </View>
          </View>
 
