@@ -1,14 +1,31 @@
-import {Link} from 'expo-router'
-import { View, Text, StyleSheet,TouchableOpacity } from 'react-native';
+import {useRouter} from 'expo-router';
+import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function HomeScreen() {
+  const router = useRouter();
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to My App</Text>
-      <TouchableOpacity style={styles.button} >
-        <Text style={styles.textButton}>Press Me</Text>
-      </TouchableOpacity>
-      <Link href = {'/about'}>Go to about</Link>
+
+      
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>Let's Get Started!</Text>
+      </View>
+
+     
+      <View style={styles.centerContent}>
+        <TouchableOpacity style={styles.div}>
+          <Text style={styles.bottom}>Sign Up</Text>
+        </TouchableOpacity>
+
+        <View style={styles.loginContainer}>
+          <Text style={styles.loginText}>Already have  an account? </Text>
+          <TouchableOpacity onPress={() => router.push('/login')}>
+            <Text style={styles.loginButton}>Log In</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
     </View>
   );
 }
@@ -16,25 +33,48 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    backgroundColor: '#5c91e0ff',
+  },
+  titleContainer: {
+    paddingTop: 60,
     alignItems: 'center',
-    backgroundColor: 'white',
   },
   title: {
-    fontSize: 24,
+    fontSize: 35,
     fontWeight: 'bold',
-  },
-  button: {
-    backgroundColor: '#007bff',
-    color: 'black',
-    height: 50,
-    width: 200,
-    justifyContent: 'center',
-    borderRadius: 5,
-  },
-  textButton: {
     color: 'white',
     textAlign: 'center',
-    fontSize: 18,
+  },
+  centerContent: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  div: {
+    height: 45,
+    width: 250,
+    backgroundColor: '#e3de3c',
+    borderRadius: 10,
+    justifyContent: 'center',
+  },
+  bottom: {
+    textAlign: 'center',
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'black',
+  },
+  loginContainer: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    paddingTop: 20,
+  },
+  loginText: {
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  loginButton: {
+    color: 'yellow',
+    fontWeight: 'bold',
   },
 });
