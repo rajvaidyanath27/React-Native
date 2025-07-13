@@ -45,8 +45,20 @@ export default function LoginScreen() {
         }}
       >
         <View style={{ padding: 50 }}>
-         
-          <Text style={{ fontWeight: 'bold' }}>Email Address</Text>
+          
+          <Text style={{ fontWeight: 'bold' }}>Full Name</Text>
+          <TextInput
+            style={{
+              width: 300,
+              backgroundColor: '#edececff',
+              borderRadius: 10,
+              marginTop: 10,
+              paddingLeft: 10,
+            }}
+            // placeholder="Enter your email"
+          />
+
+          <Text style={{ fontWeight: 'bold',paddingTop: 20 }}>Email Address</Text>
           <TextInput
             style={{
               width: 300,
@@ -59,7 +71,7 @@ export default function LoginScreen() {
           />
 
          
-          <Text style={{ paddingTop: 30, fontWeight: 'bold' }}>Password</Text>
+          <Text style={{ paddingTop: 20, fontWeight: 'bold' }}>Password</Text>
           <TextInput
             style={{
               width: 300,
@@ -98,7 +110,7 @@ export default function LoginScreen() {
             }}
           >
             <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#000' }}>
-              Log In
+              Sign Up
             </Text>
           </TouchableOpacity>
 
@@ -156,9 +168,9 @@ export default function LoginScreen() {
           </View>
 
              <View style={{flexDirection: 'row', justifyContent: 'center', paddingTop: 20}}>
-                    <Text style={{fontWeight: 'bold'}}>Don't have  an account? </Text>
-                    <TouchableOpacity onPress={() => router.push('/signup')}>
-                      <Text style={{color: '#efb60bff', fontWeight: 'semibold'}}>Sign Up</Text>
+                    <Text style={{fontWeight: 'bold'}}>Already have  an account? </Text>
+                    <TouchableOpacity onPress={() => router.push('/login')}>
+                      <Text style={{color: '#efb60bff', fontWeight: 'semibold'}}>Log In</Text>
                     </TouchableOpacity>
              </View>
         </View>

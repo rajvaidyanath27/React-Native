@@ -14,7 +14,7 @@ export default function HomeScreen() {
 
      
       <View style={styles.centerContent}>
-        <TouchableOpacity style={styles.div}>
+        <TouchableOpacity style={styles.div} onPress={() => router.push('/signup')}>
           <Text style={styles.bottom}>Sign Up</Text>
         </TouchableOpacity>
 
