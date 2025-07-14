@@ -28,7 +28,7 @@ export default function Dashboard() {
            
           }}  onPress= {() => Setview(0)}
         >
-          <Text style={{color:  view === 0 ? 'white' : 'black',}}>All Items</Text>
+          <Text style={{color:  view === 0 ? 'white' : 'black',}}>Movies</Text>
         </Pressable>
 
         <Pressable
@@ -43,7 +43,7 @@ export default function Dashboard() {
             borderWidth: 1
           }} onPress = {() => Setview(1)}
         >
-          <Text style={{color:  view === 1 ? 'white' : 'black',}}>Low Stack</Text>
+          <Text style={{color:  view === 1 ? 'white' : 'black',}}>Sports</Text>
         </Pressable>
 
         <Pressable
@@ -58,7 +58,7 @@ export default function Dashboard() {
             borderWidth: 1
           }}  onPress = { () => Setview(2)}
         >
-          <Text style={{color:  view === 2 ? 'white' : 'black',}}>Create</Text>
+          <Text style={{color:  view === 2 ? 'white' : 'black',}}>Tech</Text>
         </Pressable>
       </View>
 
