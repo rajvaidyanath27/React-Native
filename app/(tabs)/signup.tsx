@@ -92,7 +92,7 @@ export default function LoginScreen() {
           </View>
 
          
-          <TouchableOpacity
+          <TouchableOpacity onPress={() => router.push('/firstpage')}
             style={{
               backgroundColor: '#f4c430',
               height: 45,
@@ -108,7 +108,7 @@ export default function LoginScreen() {
               elevation: 5,
               alignSelf: 'center',
             }}
-          >
+          > 
             <Text style={{ fontWeight: 'bold', fontSize: 16, color: '#000' }}>
               Sign Up
             </Text>

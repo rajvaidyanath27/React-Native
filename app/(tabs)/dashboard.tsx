@@ -3,6 +3,7 @@ import {useState} from 'react';
 import Allign from './allItems';
 import Stack from './lowStack';
 import Create from './Create';  
+import { router, useRouter } from 'expo-router';
 
 export default function Dashboard() {
 
@@ -43,7 +44,7 @@ export default function Dashboard() {
             borderWidth: 1
           }} onPress = {() => Setview(1)}
         >
-          <Text style={{color:  view === 1 ? 'white' : 'black',}}>Sports</Text>
+          <Text style={{color:  view === 1 ? 'white' : 'black',}}>Romantic</Text>
         </Pressable>
 
         <Pressable
@@ -58,13 +59,19 @@ export default function Dashboard() {
             borderWidth: 1
           }}  onPress = { () => Setview(2)}
         >
-          <Text style={{color:  view === 2 ? 'white' : 'black',}}>Tech</Text>
+          <Text style={{color:  view === 2 ? 'white' : 'black',}}>Drama</Text>
         </Pressable>
       </View>
 
      { view === 0 && <Allign /> }
      { view ===1 && <Stack />}
      {view === 2 && <Create />}
+
+
+
+     <TouchableOpacity style={{marginBottom: 80}} onPress={() => router.push('/')}>
+            <Text style={{width: 200, height: 40, color: 'black'}}>suck me </Text>
+          </TouchableOpacity>
 
     </View>
   );

@@ -28,9 +28,12 @@ export default function HomeScreen() {
       </View>
       
 
-       <TouchableOpacity onPress={() => router.push('/dashboard')}>
+       {/* <TouchableOpacity style={{marginBottom: 80}} onPress={() => router.push('/dashboard')}>
             <Text style={{width: 200, height: 40, color: 'black'}}>Click me</Text>
           </TouchableOpacity>
+          <TouchableOpacity style={{marginBottom: 80}} onPress={() => router.push('/firstpage')}>
+            <Text style={{width: 200, height: 40, color: 'black'}}>suck me </Text>
+          </TouchableOpacity> */}
     </View>
   );
 }
