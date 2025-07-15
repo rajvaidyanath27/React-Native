@@ -1,14 +1,18 @@
 import React from 'react';
 import { View, Text,Image, Dimensions,TouchableOpacity } from 'react-native';
+import {useRouter} from 'expo-router';
 
 const {height,width} = Dimensions.get('window');
 
 const Stack = () => {
    const data = [
     { id: 1, image: require('../../assets/movies/dash1.jpg') },
-    { id: 2, image: require('../../assets/movies/dash3.avif') },
+    { id: 2, image: require('../../assets/movies/dash22.jpg') },
+    
     { id: 3, image: require('../../assets/movies/sunny-leone.avif') }
   ];
+
+  const router = useRouter();
   return (
     
        <View style={{ alignItems: 'center', justifyContent: 'center' }}>
@@ -64,6 +68,36 @@ const Stack = () => {
                                   ▶ Watch Now
                                 </Text>
                            </TouchableOpacity>
+
+                           
+                                        <TouchableOpacity
+                                                 onPress={() =>router.push('../castScreen/movieTwo') }
+                                                 style={{
+                                                   backgroundColor: '#8B5CF6', // violet-500
+                                                   paddingVertical: 14,
+                                                   paddingHorizontal: 24,
+                                                   borderRadius: 30,
+                                                   shadowColor: '#000',
+                                                   shadowOffset: { width: 0, height: 4 },
+                                                   shadowOpacity: 0.3,
+                                                   shadowRadius: 5,
+                                                   elevation: 8,
+                                                   alignSelf: 'center',
+                                                   marginTop: 30,
+                                                 }}
+                                               >
+                                                 <Text
+                                                   style={{
+                                                     color: '#fff',
+                                                     fontSize: 16,
+                                                     fontWeight: 'bold',
+                                                     textTransform: 'uppercase',
+                                                     letterSpacing: 1,
+                                                   }}
+                                                 >
+                                                   Show Cast
+                                                 </Text>
+                                          </TouchableOpacity>
                       </View>
 
           </View>

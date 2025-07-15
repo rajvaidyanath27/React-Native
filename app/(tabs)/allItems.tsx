@@ -1,8 +1,10 @@
 import React from 'react';
 import { View, Image,Text, Dimensions,TouchableOpacity } from 'react-native';
+import {useRouter } from 'expo-router';
 
 
 const { width, height } = Dimensions.get('window');
+
 
 const Align = () => {
   const data = [
@@ -10,11 +12,12 @@ const Align = () => {
     { id: 2, image: require('../../assets/movies/mov4.jpeg') },
     { id: 3, image: require('../../assets/movies/sunny-leone.avif') }
   ];
+  const router = useRouter();
 
   return (
     <View style={{ alignItems: 'center', justifyContent: 'center' }}>
        
-        <View style={{marginTop:20}}>
+        <View style={{marginTop:0}}>
           <View
             style={{
               width: width * 0.8,
@@ -65,6 +68,36 @@ const Align = () => {
                     ▶ Watch Now
                   </Text>
              </TouchableOpacity>
+
+             <TouchableOpacity
+                      onPress={() => router.push('../castScreen/movieOne')}
+                      style={{
+                        backgroundColor: '#8B5CF6', // violet-500
+                        paddingVertical: 14,
+                        paddingHorizontal: 24,
+                        borderRadius: 30,
+                        shadowColor: '#000',
+                        shadowOffset: { width: 0, height: 4 },
+                        shadowOpacity: 0.3,
+                        shadowRadius: 5,
+                        elevation: 8,
+                        alignSelf: 'center',
+                        marginTop: 30,
+                      }}
+                    >
+                      <Text
+                        style={{
+                          color: '#fff',
+                          fontSize: 16,
+                          fontWeight: 'bold',
+                          textTransform: 'uppercase',
+                          letterSpacing: 1,
+                        }}
+                      >
+                        Show Cast
+                      </Text>
+               </TouchableOpacity>
+               
         </View>
     </View>
 
